@@ -56,9 +56,9 @@ export async function POST(request: Request) {
             const newUser = new UserModel({
                 username,
                 email,
-                hashedPassword,
-                verifyCode,
-                expiryDate,
+                password: hashedPassword,
+                verifycode: verifyCode,
+                verifycodeexpiry: expiryDate,
                 isaccepting: true,
                 isverified: false,
                 messages: []
